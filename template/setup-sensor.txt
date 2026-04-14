@@ -1,0 +1,28 @@
+expect: ${config.topic.settingsResponse}
+${config.topic.settings}
+{
+   "MsgId": "${request.UUID}",
+   "IDGateway": "00000000",
+   "Timestamp": "${request.timeMillis}",
+   "Version": "1.0",
+   "RequestId": "${request.id}",
+   "SensorId": "${par.senId|NONE}",
+   "Command": {
+          "SensorId": "${par.strId||config.UCL.idStruttura}",
+          "Value": "SETUP",
+          "Params": [
+              {
+                  "key": "DCP",
+                  "value": "${par.DCP|21600}"
+              },
+              {
+                  "key": "DCD",
+                  "value": "${par.DCD|1800}"
+              },
+              {
+                  "key": "DCF",
+                  "value": "${par.DCF|200}"
+              }
+          ]
+      }
+}

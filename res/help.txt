@@ -1,0 +1,30 @@
+Riceve dai topic MQTT configurati.
+Pubblica in base ai comandi i tempate configurati in "template".
+
+%%SELF%% --help
+    Visualizza la guida.
+
+%%SELF%% --help <template>
+    Visualizza la guida di un template.
+
+%%SELF%% --list
+    Visualizza la lista dei template.
+
+%%SELF%% --configure <host>
+    Configura l'accesso per una UCL specificando l'host.
+
+%%SELF%%
+    Resta in ascolto e visualizza le informazioni dai topics.
+
+%%SELF%% [ <template> ] [ <parametri> ] [ --dump ] [ --no-expect ]
+    Esegue il template e la richiesta.
+
+I parametri dipendono dai singoli template e dai parametri generali
+configurati nel file: globals.json
+
+Vedi README.MD
+
+Parametri:
+  --dump        Visualizza il dump della richiesta senza inviarla.
+  --no-expect   Non resta in attesa della risposta ma visualizza tutti
+                i messaggi in arrivo sui topic.

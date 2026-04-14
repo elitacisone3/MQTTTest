@@ -1,0 +1,15 @@
+expect: ${config.topic.feedback}
+${config.topic.command}
+{
+   "MsgId": "${request.UUID}",
+   "IDGateway": "${var.gateway}",
+   "Timestamp": "${request.timeMillis}",
+   "Version": "1.0",
+   "RequestId": "${request.id}",
+   "Command": {
+       "SensorId": "${par.senId|0}",
+       "Value": "STOP",
+       "Params": [
+       ]
+   }
+}

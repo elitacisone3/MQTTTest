@@ -1,0 +1,22 @@
+{
+    "name": "epto/mqtt",
+    "description": "MQTTTEST",
+    "require": {
+        "php": "^8.0",
+        "php-mqtt/client": "^2.2",
+      "ext-pcntl": "*",
+      "ext-openssl": "*",
+      "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Epto\\Mqtt\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "elitacisone3",
+            "email": "epto@elitacisone.xyz"
+        }
+    ]
+}

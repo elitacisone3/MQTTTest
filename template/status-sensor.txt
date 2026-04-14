@@ -1,0 +1,15 @@
+expect: ${config.topic.settingsResponse}
+${config.topic.settings}
+{
+   "MsgId": "${request.UUID}",
+   "IDGateway": "00000000",
+   "Timestamp": "${request.timeMillis}",
+   "Version": "1.0",
+   "RequestId": "${request.id}",
+   "SensorId": "${par.senId|NONE}",     //  Id Sensore
+   "Command": {
+       "Value": "STATUS",
+       "Params": [
+       ]
+   }
+}
